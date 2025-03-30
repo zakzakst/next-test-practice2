@@ -1,5 +1,5 @@
 import type { RequestHandler } from "msw";
 
-import { testHandler } from "./test";
+import { testHandlers } from "./test";
 
-export const handlers: RequestHandler[] = [testHandler];
+export const handlers: RequestHandler[] = [...testHandlers];
