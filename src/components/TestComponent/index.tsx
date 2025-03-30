@@ -29,6 +29,44 @@ export const TestComponent = () => {
     setClickNum(clickNum + 1);
   };
 
+  const onClickPut = async () => {
+    try {
+      const res = await fetch(url, {
+        method: "PUT",
+        body: JSON.stringify({ text: "put test body" }),
+      });
+      const json = await res.json();
+      console.log("put response", json);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const onClickPost = async () => {
+    try {
+      const res = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify({ text: "post test body" }),
+      });
+      const json = await res.json();
+      console.log("post response", json);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const onClickDelete = async () => {
+    try {
+      const res = await fetch(url, {
+        method: "DELETE",
+      });
+      const json = await res.json();
+      console.log("delete response", json);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <div>
       <p>
@@ -36,6 +74,9 @@ export const TestComponent = () => {
       </p>
       <p>
         <button onClick={onClick}>ボタン</button>
+        <button onClick={onClickPut}>PUT</button>
+        <button onClick={onClickPost}>POST</button>
+        <button onClick={onClickDelete}>DELETE</button>
       </p>
     </div>
   );
