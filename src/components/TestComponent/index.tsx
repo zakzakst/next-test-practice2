@@ -17,7 +17,6 @@ export const TestComponent = () => {
           throw new Error("Failed to fetch");
         }
         const json: Test = await res.json();
-        console.log(json);
         setTest(json);
       } catch (err) {
         console.error(err);
