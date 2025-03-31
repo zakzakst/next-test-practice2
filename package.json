@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:unit": "vitest run --coverage --project=default",
+    "test:unit": "vitest run --coverage --project=next",
     "test:e2e": "playwright test",
     "test:storybook": "vitest run --coverage --project=storybook",
     "test:storybook2": "test-storybook",
