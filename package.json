@@ -13,7 +13,8 @@
     "test:storybook2": "test-storybook",
     "report:e2e": "playwright show-report",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "json-server:sample": "json-server json-server/sample.json5"
   },
   "dependencies": {
     "next": "15.2.4",
@@ -47,6 +48,7 @@
     "eslint-config-next": "15.2.4",
     "eslint-plugin-storybook": "^0.12.0",
     "jsdom": "^26.0.0",
+    "json-server": "^1.0.0-beta.3",
     "msw": "^2.7.3",
     "msw-storybook-addon": "^2.0.4",
     "playwright": "^1.51.1",
